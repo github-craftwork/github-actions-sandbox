@@ -8,8 +8,8 @@ function getWeekNumber (d) {
   const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1))
   // Calculate full weeks to nearest Thursday
   const weekNum = Math.ceil((((d - yearStart) / 86400000) + 1) / 7)
+  console.info("Hello")
   // Return week number
   return weekNum
 }
-
 module.exports = (date) => getWeekNumber(date || new Date())
